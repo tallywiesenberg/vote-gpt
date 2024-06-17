@@ -33,17 +33,18 @@ tested with pytest
 Front End:
 First, we contemplated how and where to host the front end of our app. Initially, we were going to host our interface on Flask because it would be able to accept a simple input, such as a user's location. We were planning on only querying a user's location and then providing them a list of tips and resources for voting in their area. However, we realized that we wanted to make the user a passive participant in the app. For that reason, we decided on a form where users could check off the specific voting topics and needs they would like additional information on. In the end, we decided in using a Google Form as a front end because it allows the user to check off of a list. Moreover, Google Forms allows the developers (or app owners) to document and study any kinds of trends in the voting information that users are requesting. 
 
-
 ## Challenges we ran into
-1. how to host the user interface. at first, we were going to host our interface on Flask because...However, Flask has limits with uptime; limited uptime would prevent this project from existing for a long period of time. 
-1a. solution: creating a google form, so that...An added bonus of using a google form and connecting our 
+One challenge we faced was that none of the APIs we found offered both search engine features and text processing. First, we started with GPT2 but GPT2 required too much tuning. Even with trial and error, we could not resolve this issue. Then, we used GPT3.5 to create search prompts from questions. However, problems with tuning still persisted. 
 
-3. how to make the information actionable for users.
-3a. 
+We observed that replying on GPT to create prompts was the root cause of our challenge. In response, we decided to use the questions themselves as prompts, which simplified the main script and helped us overcome the tuning issue.
+ 
 ## Accomplishments that we're proud of
 One accomplishment we are proud of is having used prompt enginneering 
 
 ## What we learned
 From this experience, we learned how valuable human-centered design is for designing educational and public service technology tools. 
+
 ## What's next for VoteGPT
-There are a few next steps we would implement for VoteGPT. One is training our app to provide responses in plain English. Some of the responses provided by our app -- such as the one regarding legal protections voters have at the polls -- were filled with governmental jargon and had a more formal feel to it. Governmental jargon is not well understood by laypeople, so 
+There are a few next steps we would implement for VoteGPT. One is training our app to provide responses in plain English. Some of the responses provided by our app -- such as the one regarding legal protections voters have at the polls -- were filled with governmental jargon and had a more formal feel to it. Governmental jargon is not well understood by laypeople, and its exclusivity could become a deterrent for users to use the information provided to them by our app. Because we want our app to be actionable for people from varying career, educational and socio-economic backgrounds it is imperative that we iterate our app to provide responses that are easy to read and understand. 
+
+Another next step would be to send the app output as a text message or email to users' phones. Due to time restraints of the hackathon, the output is currently sent and stored on a Google Sheet. However, because the point of the app is to empower people with the information that can remove barriers to voting, the app needs to be able to send information directly to users. Not everyone uses email or has consistent access to a compter, so that is why we want to make it possible for users to access the information directly on their phone. 
