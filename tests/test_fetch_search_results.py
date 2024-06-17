@@ -1,4 +1,7 @@
-from src.vote_gpt.main import call_gpt, create_search_query, fetch_search_results, process_search_results
+from src.vote_gpt.prompt import create_search_query, process_search_results, call_gpt
+from src.vote_gpt.search import fetch_search_results
+
+
 import pytest
 
 

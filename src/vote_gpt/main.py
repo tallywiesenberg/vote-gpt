@@ -1,5 +1,6 @@
-from vote_gpt.forms import get_google_sheets_data
-from vote_gpt.prompt import call_gpt
+from src.vote_gpt.forms import get_google_sheets_data
+from src.vote_gpt.prompt import create_search_query, process_search_results
+from src.vote_gpt.search import fetch_search_results, search_tavily
 
 def main():
     # Get data from Google Sheets
@@ -10,15 +11,20 @@ def main():
             # If there are less than 2 columns, skip this row (assume first column is question, second column is the response)
             continue
         
-        timestamp = row[0]
         state = row[1]
         zip_code = row[2]
-        applicable_questions = row[3].split(",")
-        print(f"Question: {applicable_questions}")
-        
-        # Call OpenAI with the question
-        answer = call_gpt(question)
-        print(f"OpenAI Answer: {answer}")
+        applicable_questions = row[3].split(",") + [row[4]]
 
+        
+        for question in applicable_questions:
+            user_question = f"I live in {state} in zip code {zip_code}. For the upcoming election, {question}"
+
+            search_results = search_tavily(user_question)
+
+            summarized_content = process_search_results(search_results, user_question)
+
+            print("Q:", question)
+            print("A:", summarized_content)
+            print("\n")
 if __name__ == '__main__':
     main()

@@ -11,17 +11,19 @@ def process_search_results(results:str, question:str):
     prompt = f"""
     {results} \n above are search results about
     voting laws in the US. Answer the following question from the search results:
-    '{question}' Let me know the certainty of your answer on a scale of 1-10.
+    '{question}'.
+    Please...
+    * emphasize official information and specific procedures,
+    * provide links, phone numbers, and email addresses if available
     """
     return call_gpt(prompt)
-
-instructions = """
-You are a master summarizer of complex, hard to understand information.
-"""
 
 def call_gpt(query:str):
     """Retrieve a response from gpt"""
 
+    instructions = """
+    You are a master summarizer of complex, hard to understand information about the year 2024.
+    """
     client = OpenAI()
     response = client.chat.completions.create(
     model="gpt-3.5-turbo",
@@ -30,4 +32,4 @@ def call_gpt(query:str):
         {"role": "user", "content": query},
     ]
     )
-    return response.choices[0].message.content
+    return response.choices[0].message.content.strip('\"') + "\n"
