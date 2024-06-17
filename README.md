@@ -13,8 +13,11 @@ We are inspired by this major increase in voters, and want to continue to increa
 
 With our app, VoteGPT, we are addressing socio-economic obstacles individuals may face when trying to vote, such as finding childcare or being able to take time off work in order to vote.
 
+## Who the potential users are
+We designed this app to provide actionable information to those who face obstacles to voting. Specific obstacles include not being able to vote due to being unable to access childcare and not being able to get leave from work to vote. 
+
 ## What it does
-Our app works in three phases. The first phase is to collect information directly from the user about the kind of information that is pertinent to their voting needs. We collect the information by  
+Our app works in three phases. The first phase is to collect information directly from the user about the kind of information that is pertinent to their voting needs. We collect the information through a google form that asks only two questions. Then   
 
 ## How we built it
 Our app has two components: a back end and a front end. 
@@ -28,12 +31,13 @@ Next, we a built search engine results fetcher to retrieve unstructured text fro
 
 We also iteratively improved output of meaningful responses by utilizing search engines and prompt engineering. To increase the precision and accuracy of the responses, we restricted search results to `.gov` and `.org` websites. 
 
-...implemented google sheets API to read new data from the google form frontend
-
-tested with pytest
+Finally, we tested with pytest.
 
 Front End:
 First, we contemplated how and where to host the front end of our app. Initially, we were going to host our interface on Flask because it would be able to accept a simple input, such as a user's location. We were planning on only querying a user's location and then providing them a list of tips and resources for voting in their area. However, we realized that we wanted to make the user a passive participant in the app. For that reason, we decided on a form where users could check off the specific voting topics and needs they would like additional information on. In the end, we decided in using a Google Form as a front end because it allows the user to check off of a list. Moreover, Google Forms allows the developers (or app owners) to document and study any kinds of trends in the voting information that users are requesting. 
+
+Then, to input the specific concerns or obstacles into our LLM, we implemented the google sheets API to read new data from the google form frontend into our backend. 
+
 
 ## Challenges we ran into
 One challenge we faced was that none of the APIs we found offered both search engine features and text processing. First, we started with GPT2 but GPT2 required too much tuning. Even with trial and error, we could not receive useful or coherent outputs. We decided to use GPT3.5 as our LLM because its outputs are organized, reliable, and coherent. 
@@ -43,7 +47,7 @@ We first used GPT3.5 to both create the search engine prompt from the user's goo
 To get better search results, we replaced Google search with Tavily search, which is a search engine designed to be used in tandem with LLMs. Tavily can also accept questions as search queries, so we no longer needed GPT3.5 to convert the user questions into generic search queries. We decided to use the questions themselves as prompts, which simplified the main script and increased the accuracy and clarity of the final responses.
  
 ## Accomplishments that we're proud of
-One accomplishment we are proud of is having used prompt enginneering 
+One accomplishment we are proud of is having leveraged prompt enginneering to get precise answers from messy, unorganized inputs. We consider this an accomplishment because precise answers will help provide our users action steps to overcoming obstacles they face in casting their ballot. 
 
 ## What we learned
 From this experience, we learned how valuable human-centered design is for designing educational and public service technology tools. 
