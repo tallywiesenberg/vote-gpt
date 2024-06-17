@@ -17,27 +17,26 @@ Our app works in three phases. The first phase is to collect information directl
 ## How we built it
 Our app has two components: a back end and a front end. 
 
+Back End:
 First, we decided to take a functional, nested approach to code organization. The reason for this technical decision was that we needed to process an input without storing any data -- which is why chose to make our code organization functional -- and we implemented nested functions to make the process readable for future contributors.
 
-Then we made the technical decision to use GPT3.5 to summarize and format unstructured scraped website data. GPT3.5 
+Then we made the technical decision to use GPT3.5 as our large language model (LLM). Our app requires a LLM to summarize and format unstructured scraped website data into actionable information to send to users. The reason behind this technical decision based on GPT3.5's reliability and neutral tone, as well as it's ability to organize and summarize messy text.
 
 Next, we a built search engine results fetcher to retrieve unstructured text from top results. We experimented with Tavily and Google. However we decided to proceed with Tavily because is designed to work with large language models (LLM) like GPT3.5.  
 
-We also maximized output of meaningful responses by 
- To increase the precision and accuracy of the responses, we restricted search results to `.gov` and `.org` websites. 
+We also iteratively improved output of meaningful responses by utilizing search engines and prompt engineering. To increase the precision and accuracy of the responses, we restricted search results to `.gov` and `.org` websites. 
 
-iteratively improved LLM results with combination of search engines and prompt engineering
-implemented google sheets API to read new data from the google form frontend
+...implemented google sheets API to read new data from the google form frontend
+
 tested with pytest
 
+Front End:
+First, we contemplated how and where to host the front end of our app. Initially, we were going to host our interface on Flask because it would be able to accept a simple input, such as a user's location. We were planning on only querying a user's location and then providing them a list of tips and resources for voting in their area. However, we realized that we wanted to make the user a passive participant in the app. For that reason, we decided on a form where users could check off the specific voting topics and needs they would like additional information on. In the end, we decided in using a Google Form as a front end because it allows the user to check off of a list. Moreover, Google Forms allows the developers (or app owners) to document and study any kinds of trends in the voting information that users are requesting. 
 
 
 ## Challenges we ran into
 1. how to host the user interface. at first, we were going to host our interface on Flask because...However, Flask has limits with uptime; limited uptime would prevent this project from existing for a long period of time. 
 1a. solution: creating a google form, so that...An added bonus of using a google form and connecting our 
-
-2. there's no API for searching the web with GPT.
-2a.
 
 3. how to make the information actionable for users.
 3a. 
@@ -45,6 +44,6 @@ tested with pytest
 One accomplishment we are proud of is having used prompt enginneering 
 
 ## What we learned
-From this experience, we learned how much UX research is required 
+From this experience, we learned how valuable human-centered design is for designing educational and public service technology tools. 
 ## What's next for VoteGPT
-There are a few next steps we would implement for VoteGPT. One is training our app to provide responses in plain English. 
+There are a few next steps we would implement for VoteGPT. One is training our app to provide responses in plain English. Some of the responses provided by our app -- such as the one regarding legal protections voters have at the polls -- were filled with governmental jargon and had a more formal feel to it. Governmental jargon is not well understood by laypeople, so 
