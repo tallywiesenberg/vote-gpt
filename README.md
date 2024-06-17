@@ -1,20 +1,23 @@
-What is this project?
-
-Why is the value of the project to prospective users?
+**VOTEGPT APP**
 
 
 ## Inspiration
-In 73% of voting-age U.S. citizens were registered to vote for presidential elections in 2020, according to the U.S. Census Bureau. [Current Population Survey's November 2020 Voting and Registration Supplement] Not only is this percentage of people registered to vote a 20-year high, according to the Bureau, but so is the number of voting-eligble people who voted in the 2020 elections. A voting-elgible person is defined by the Bureau as a person who is at least 18 years old and U.S. citizen who was either born in the United States or its territories or naturalized. 
+In 2020, 67% of voting-eligible people voted in the presidential elections, according to the U.S. Census Bureau. [Current Population Survey's November 2020 Voting and Registration Supplement] 
+A voting-elgible person is defined by the Bureau as a person who is at least 18 years old and U.S. citizen who was either born in the United States or its territories or naturalized. 
 
-However, it is one thing to be registered to vote. It is another to vote. 
+The percentage reported for 2020 voting turnout is a five-percent increase from 2016, when 62% of the voting-eligble population voted in the presidential elections. While 5% might seem like a small increase, the impact of this increase can be better visualized when understood as a quantity of people: 17 million more people voted in 2020 than in 2016. 
 
-This means that 17 million more people voted in 2020 
+And that is with a pandemic. 
 
-Even with the high voter registration percentage, not all of those people ended up voting. According to the Bureau, only 67% of eligible voters there was a 73-67
+We are inspired by this major increase in voters, and want to continue to increase voter turnout in the 2024 election. However, in order to help increase turnout, we must also address reasons why individuals do not vote. 
+
+With our app, VoteGPT, we are addressing socio-economic obstacles individuals may face when trying to vote, such as finding childcare or being able to take time off work in order to vote.
 
 ## What it does
 Our app works in three phases. The first phase is to collect information directly from the user about the kind of information that is pertinent to their voting needs. We collect the information by  
 ## Who the prospective users are
+Our prospective users
+
 
 ## How we built it
 Our app has two components: a back end and a front end. 
@@ -51,4 +54,4 @@ From this experience, we learned how valuable human-centered design is for desig
 ## What's next for VoteGPT
 There are a few next steps we would implement for VoteGPT. One is training our app to provide responses in plain English. Some of the responses provided by our app -- such as the one regarding legal protections voters have at the polls -- were filled with governmental jargon and had a more formal feel to it. Governmental jargon is not well understood by laypeople, and its exclusivity could become a deterrent for users to use the information provided to them by our app. Because we want our app to be actionable for people from varying career, educational and socio-economic backgrounds it is imperative that we iterate our app to provide responses that are easy to read and understand. 
 
-Another next step would be to send the app output as a text message or email to users' phones. Due to time restraints of the hackathon, the output is currently sent and stored on a Google Sheet. However, because the point of the app is to empower people with the information that can remove barriers to voting, the app needs to be able to send information directly to users. Not everyone uses email or has consistent access to a compter, so that is why we want to make it possible for users to access the information directly on their phone. 
+Another next step would be to send the app output as a text message or email to users' phones. Due to time restraints of the hackathon, the output is currently sent and displayed on the terminal. However, because the point of the app is to empower people with the information that can remove barriers to voting, the app needs to be able to send information directly to users. Not everyone uses email or has consistent access to a compter, so that is why we want to make it possible for users to access the information directly on their phone. 
