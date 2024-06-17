@@ -8,7 +8,9 @@ In 73% of voting-age U.S. citizens were registered to vote for presidential elec
 
 However, it is one thing to be registered to vote. It is another to vote. 
 
-According to the Bureau, there was a 73-67
+This means that 17 million more people voted in 2020 
+
+Even with the high voter registration percentage, not all of those people ended up voting. According to the Bureau, only 67% of eligible voters there was a 73-67
 
 ## What it does
 Our app works in three phases. The first phase is to collect information directly from the user about the kind of information that is pertinent to their voting needs. We collect the information by  
@@ -34,9 +36,11 @@ Front End:
 First, we contemplated how and where to host the front end of our app. Initially, we were going to host our interface on Flask because it would be able to accept a simple input, such as a user's location. We were planning on only querying a user's location and then providing them a list of tips and resources for voting in their area. However, we realized that we wanted to make the user a passive participant in the app. For that reason, we decided on a form where users could check off the specific voting topics and needs they would like additional information on. In the end, we decided in using a Google Form as a front end because it allows the user to check off of a list. Moreover, Google Forms allows the developers (or app owners) to document and study any kinds of trends in the voting information that users are requesting. 
 
 ## Challenges we ran into
-One challenge we faced was that none of the APIs we found offered both search engine features and text processing. First, we started with GPT2 but GPT2 required too much tuning. Even with trial and error, we could not resolve this issue. Then, we used GPT3.5 to create search prompts from questions. However, problems with tuning still persisted. 
+One challenge we faced was that none of the APIs we found offered both search engine features and text processing. First, we started with GPT2 but GPT2 required too much tuning. Even with trial and error, we could not receive useful or coherent outputs. We decided to use GPT3.5 as our LLM because its outputs are organized, reliable, and coherent. 
 
-We observed that replying on GPT to create prompts was the root cause of our challenge. In response, we decided to use the questions themselves as prompts, which simplified the main script and helped us overcome the tuning issue.
+We first used GPT3.5 to both create the search engine prompt from the user's google form data and to summarize the search engine results. However, GPT3.5's search engine prompts were off-target or unspecific, particularly when using Google search.
+
+To get better search results, we replaced Google search with Tavily search, which is a search engine designed to be used in tandem with LLMs. Tavily can also accept questions as search queries, so we no longer needed GPT3.5 to convert the user questions into generic search queries. We decided to use the questions themselves as prompts, which simplified the main script and increased the accuracy and clarity of the final responses.
  
 ## Accomplishments that we're proud of
 One accomplishment we are proud of is having used prompt enginneering 
