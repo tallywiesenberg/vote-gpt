@@ -4,17 +4,20 @@ Why is the value of the project to prospective users?
 
 
 ## Inspiration
-In 73% of voting-age U.S. citizens were registered to vote for presidential elections in 2020, according to the U.S. Census Bureau. [Current Population Survey's November 2020 Voting and Registration Supplement] Not only is this percentage of people registered to vote a 20-year high, according to the Bureau, but so is the number of voting-eligble people who voted in the 2020 elections. A voting-elgible person is defined as a person who is at least 18 years old and U.S. citizen who was either born in the United States or its territories or naturalized, according to ___.
+In 73% of voting-age U.S. citizens were registered to vote for presidential elections in 2020, according to the U.S. Census Bureau. [Current Population Survey's November 2020 Voting and Registration Supplement] Not only is this percentage of people registered to vote a 20-year high, according to the Bureau, but so is the number of voting-eligble people who voted in the 2020 elections. A voting-elgible person is defined by the Bureau as a person who is at least 18 years old and U.S. citizen who was either born in the United States or its territories or naturalized. 
 
-It is one thing to be registered to vote. It is another to actually get to the polls. 
+However, it is one thing to be registered to vote. It is another to vote. 
+
+According to the Bureau, there was a 73-67
 
 ## What it does
-
-**page will include a notification box that lets users know that absentee ballots are still available, even though we are no longer in a pandemic.**
+Our app does..
 
 ## Who the prospective users are
 
 ## How we built it
+Our app has two components: a back end and a front end. 
+
 
 ## Challenges we ran into
 1. how to host the user interface. at first, we were going to host our interface on Flask because...However, Flask has limits with uptime; limited uptime would prevent this project from existing for a long period of time. 
