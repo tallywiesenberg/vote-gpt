@@ -17,7 +17,7 @@ With our app, VoteGPT, we are addressing socio-economic obstacles individuals ma
 We designed this app to provide actionable information to those who face obstacles to voting. Specific obstacles include not being able to vote due to being unable to access childcare and not being able to get leave from work to vote. 
 
 ## What it does
-Our app works in three phases. The first phase is to collect information directly from the user about the kind of information that is pertinent to their voting needs. We collect the information through a google form that asks only two questions. Then   
+Our app works in three phases. The first phase is to collect information directly from the user about the kind of information that is pertinent to their voting needs. We collect the information through a google form that asks only two questions. Then we ask the Tavily search engine each individual question selected by the user. Third, we use GPT3.5 to summarize the Tavily answers. Finally, we print each question and answer to the console.
 
 ## How we built it
 Our app has two components: a back end and a front end. 
