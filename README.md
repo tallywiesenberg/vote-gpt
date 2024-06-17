@@ -52,3 +52,13 @@ From this experience, we learned how valuable human-centered design is for desig
 There are a few next steps we would implement for VoteGPT. One is training our app to provide responses in plain English. Some of the responses provided by our app -- such as the one regarding legal protections voters have at the polls -- were filled with governmental jargon and had a more formal feel to it. Governmental jargon is not well understood by laypeople, and its exclusivity could become a deterrent for users to use the information provided to them by our app. Because we want our app to be actionable for people from varying career, educational and socio-economic backgrounds it is imperative that we iterate our app to provide responses that are easy to read and understand. 
 
 Another next step would be to send the app output as a text message or email to users' phones. Due to time restraints of the hackathon, the output is currently sent and displayed on the terminal. However, because the point of the app is to empower people with the information that can remove barriers to voting, the app needs to be able to send information directly to users. Not everyone uses email or has consistent access to a compter, so that is why we want to make it possible for users to access the information directly on their phone. 
+
+## How to run locally
+First, create `.env` file with relevant enviroment variables for Tavily and OpenAI APIs.
+
+Then, run the following commands:
+'''bash
+python3 -m venv venv
+source venv/bin/activate
+python3 -m src.vote_gpt.main
+'''
