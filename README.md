@@ -15,9 +15,6 @@ With our app, VoteGPT, we are addressing socio-economic obstacles individuals ma
 
 ## What it does
 Our app works in three phases. The first phase is to collect information directly from the user about the kind of information that is pertinent to their voting needs. We collect the information by  
-## Who the prospective users are
-Our prospective users
-
 
 ## How we built it
 Our app has two components: a back end and a front end. 
