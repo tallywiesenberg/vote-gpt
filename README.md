@@ -61,8 +61,8 @@ Another next step would be to send the app output as a text message or email to 
 First, create `.env` file with relevant enviroment variables for Tavily and OpenAI APIs.
 
 Then, run the following commands:
-'''bash
+```bash
 python3 -m venv venv
 source venv/bin/activate
 python3 -m src.vote_gpt.main
-'''
+```
