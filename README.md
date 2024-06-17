@@ -1,4 +1,4 @@
-**VOTEGPT APP**
+# VOTEGPT APP
 
 
 ## Inspiration
